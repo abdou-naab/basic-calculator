@@ -4,9 +4,9 @@
     --btn-grey: #7a99ac;
     --light: #d8e1e2;
     --screen: #d2dcbb;
-    --orange: #d2dcbb;
-    --bg:#d2dcbb;
-    --bg-shade: #d2dcbb;
+    --orange: #ff8103;
+    --bg:#fdda00;
+    --bg-shade: #fbbc00;
   }
 body{
     margin: 0;
@@ -17,28 +17,42 @@ body{
 }
 .container{
     flex-grow: 1;
+    background-color: var(--bg);
 }
 footer{
     padding: 1rem;
+    color: var(--bg-shade);
+    font-weight: bold;
+    font-size: larger;
 }
 .container, footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
 }
 .calculator{
+    overflow: hidden;
     display: grid;
     grid-template-rows: repeat(5,20%);
     width: 20rem;
     height: 28rem;
-    border: 2px solid black;
+    box-shadow: 16px 16px 6px 9px var(--bg-shade);
 }
 .screen{
     background-color: var(--screen);
     margin:16px;
     box-shadow: 0 0 0px 16px var(--grey);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+
 }
+.screen .top, .screen .down{
+    flex-grow: 1;
+    padding-right: 1rem;
+    overflow: hidden;
+}
+
 .buttons{
     background-color: var(--light); 
     grid-row: 2 / -1;
@@ -50,8 +64,14 @@ footer{
     gap: 0.6rem;
     padding: 1rem;
 }
+.buttons div:active {
+    box-shadow: 1px 1px var(--blue);
+    transform: translateY(1px);
+    transform: translateX(1px);
+}
 
 .buttons div{
+    border-radius: 0.4rem;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -62,7 +82,20 @@ footer{
 .zero{
     grid-column: 1 / span 2 ;
 }
-.equ{
+div.equ {
     grid-row: 4/ span 2;
     grid-column: 4 / 4;
+    background-color: var(--orange);
+    color: white;
 }
+div.ac,
+div.c,
+div.dev,
+div.mul,
+div.min,
+div.plu{
+    background-color: var(--blue);
+    color: white;
+    font-weight: 400;
+} 
+
