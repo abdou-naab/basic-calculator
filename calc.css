@@ -42,8 +42,9 @@ footer{
     background-color: var(--screen);
     margin:16px;
     box-shadow: 0 0 0px 16px var(--grey);
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 45% 55%;
+    grid-template-columns: 1fr;
     overflow: hidden;
 
 }
@@ -51,6 +52,8 @@ footer{
     flex-grow: 1;
     padding-right: 1rem;
     overflow: hidden;
+    align-self: center;
+    justify-self: right;
 }
 
 .buttons{
