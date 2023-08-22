@@ -55,6 +55,9 @@ footer{
     align-self: center;
     justify-self: right;
 }
+.screen .down {
+    font-size: 1.4rem;
+}
 
 .buttons{
     background-color: var(--light); 
@@ -81,6 +84,7 @@ footer{
     align-items: center;
     font-size: 1.6rem;
     background-color: var(--btn-grey);
+    cursor: pointer;
 }
 .zero{
     grid-column: 1 / span 2 ;

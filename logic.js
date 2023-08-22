@@ -203,5 +203,4 @@ document.addEventListener('click', (e) => {
         topScreen.textContent = TSC.concat(` ${operatorsObject[e.target.className]} `)     
         downScreen.textContent = `${TSC}`
     } 
-
 }); 
